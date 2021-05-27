@@ -47,6 +47,34 @@ if (timeInBetween < 0) {
 });
 
 
+const LIMIT_TIME = 30;
+let timeSlippedAway = 0;
+let timeLeft = LIMIT_TIME; 
 
-// used these tutorials for guidance https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript
-// https://www.javascripttutorial.net/javascript-dom/javascript-countdown-timer/
+
+function timeRemaining(timeLeft) {
+    const minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    if (seconds < 10) {
+        seconds = `0${seconds}`;
+    }
+    
+    return document.getElementById("round-timer-label").innerHTML = `${minutes}: ${seconds}`;
+}  ; 
+
+
+
+let timerInterval = null
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+
+        timeSlippedAway = timeSlippedAway += 1;
+        timeLeft = LIMIT_TIME - timeSlippedAway;
+
+        document.getElementById("round-timer-label").innerHTML = timeRemaining(timeLeft);
+    }, 1000); 
+}
+
+startTimer();

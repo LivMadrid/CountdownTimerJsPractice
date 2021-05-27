@@ -27,6 +27,11 @@ h1 {
     font-family:'Monofett', cursive;
 } 
 
+/* .button {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    display: ;
+} */
 
 .input {
     font-size: 50px;
@@ -64,9 +69,9 @@ h1 {
 }
 
 .round-timer__circle {
-    fill: rgb(0, 149, 248);
-    stroke: white;
-    stroke-width: 5px;
+    fill:none ;
+    stroke:none ;
+    /* stroke-width: 5px; */
 }
 
 .round-timer__path_elapsed {
@@ -85,4 +90,23 @@ h1 {
     justify-content: center;
     font-size: 30px;
     font-family:'Oswald', sans-serif;
+}
+
+.round-timer__path-remaining {
+    stroke-width: 8px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: currentColor;
+
+}
+
+.base-timer__path-remaining.grey {
+    color: grey
+}
+
+
+.round-timer__svg {
+    transform: scaleX(-1);
 }

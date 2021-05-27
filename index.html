@@ -6,12 +6,12 @@
     </head>
 
     <body> 
-        <h1> TIME TIME TIME</h1>
-        <p class="input"> Countdown! 
+        <h1> Countdown! </h1>
+        <p class="input"> 
             Date: <input id="date" type="date"/> 
             Time: <input id="time" type="time"/>
             <button class="button" id="submit">Enter</button>
-        
+         
         </p>
         <div class="message" id="message"></div>
         <div class="container"> 
@@ -23,17 +23,34 @@
         </div>
         <p class="center"> FROM NOW!</p>
         
+        <div class="container"> 
+            <button class="button" id="go">Start Timer</button>
+            </p>
+        </div>
+
+
         <div class="round-timer">
             <svg class="round-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <g class="round-timer__circle">
-                 <circle class="round-timer__path-elapsed" cx="50" cy="50" r="40"/>
+                 <circle class="round-timer__path-elapsed" cx="50" cy="50" r="40"></circle>
+                 <path 
+                    id="round-timer-path-remaining"
+                    stroke-dasharray="0"
+                    class="round-timer__path-remaining ${remainingPathColor}"
+                     d="
+                        M 50, 50
+                        m -45, 0
+                        a 45, 45 0 1, 0 90, 0 
+                        a 45,45 0 1, 0 -90, 0
+                        " 
+                 ></path>
                 </g>
             </svg>
             <span id="round-timer-label" class="round-timer__label">
                 <label>  </label>
             </span>
         </div>
-          
+        
 
 
 

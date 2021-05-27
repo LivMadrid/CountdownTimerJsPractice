@@ -2,6 +2,7 @@
 const submit = document.getElementById("submit");
 const date = document.getElementById("date");
 const time = document.getElementById("time");
+const start = document.getElementById("go");
 let repeatfunc = null; 
 
 
@@ -47,7 +48,7 @@ if (timeInBetween < 0) {
 });
 
 
-const LIMIT_TIME = 30;
+const LIMIT_TIME = 3600;
 let timeSlippedAway = 0;
 let timeLeft = LIMIT_TIME; 
 
@@ -67,14 +68,29 @@ function timeRemaining(timeLeft) {
 
 let timerInterval = null
 
-function startTimer() {
+start.addEventListener ("click", function startTimer() {
     timerInterval = setInterval(() => {
 
         timeSlippedAway = timeSlippedAway += 1;
         timeLeft = LIMIT_TIME - timeSlippedAway;
+        
+        const COLOR_CODE = {
+            info: {
+                color: "grey" 
+            }
+        };
+
+    document.getElementById("round-timer-path-remaining").innerHTML = COLOR_CODE.info.color;
 
         document.getElementById("round-timer-label").innerHTML = timeRemaining(timeLeft);
     }, 1000); 
-}
+});
 
-startTimer();
+
+
+
+
+
+
+
+

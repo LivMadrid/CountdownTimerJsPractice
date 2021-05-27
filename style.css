@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(0, 149, 248);
+    color: white;  
+}
+
+header {
+    background: rgb(0, 149, 248);
+    padding: 20px;
+}
+
+
+
+h1 {
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+    background:rgb(0, 149, 248);
+    text-align: center;
+    font-family:'Monofett', cursive;
+} 
+
+
+.input {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    background:rgb(0, 149, 248);
+    text-align: center;
+    font-family:'Oswald', sans-serif;
+    padding : 30px;
+}
+.container {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    background:rgb(0, 149, 248);
+    text-align: center;
+    font-family:'Oswald', sans-serif;
+    border: 5px solid  rgb(255, 255, 255);
+    border-radius: 60px;
+    padding: 20px;
+}
+
+.center { 
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    background:rgb(0, 149, 248);
+    text-align: center;
+    font-family:'Monofett', cursive;
+}
